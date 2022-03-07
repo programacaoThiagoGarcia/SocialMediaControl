@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/users">
+
+    <fragment
+        android:id="@+id/users"
+        android:name="com.example.socialmediacontrol.android.modules.ui.fragments.Users"
+        android:label="users_fragment"
+        tools:layout="@layout/users_fragment" >
+        <action
+            android:id="@+id/action_users_to_userDetail"
+            app:destination="@id/userDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/userDetail"
+        android:name="com.example.socialmediacontrol.android.modules.ui.fragments.UserDetail"
+        android:label="user_detail_fragment"
+        tools:layout="@layout/user_detail_fragment" >
+        <argument
+            android:name="user_id"
+            app:argType="string" />
+    </fragment>
+</navigation>

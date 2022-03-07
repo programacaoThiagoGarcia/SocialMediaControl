@@ -5,7 +5,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class User(
+ data class User(
     @SerialName("address")
     val address: Address,
     @SerialName("company")
