@@ -42,6 +42,7 @@ class UsersAdapter(private val context: Context) :
 
     class UsersAdapterViewHolder(private val binding: UserItemBinding, private val callback : OnClickUsersItem) :
         RecyclerView.ViewHolder(binding.root) {
+
         fun setBind(userItem: User) {
             binding.user = userItem
             binding.callback = callback

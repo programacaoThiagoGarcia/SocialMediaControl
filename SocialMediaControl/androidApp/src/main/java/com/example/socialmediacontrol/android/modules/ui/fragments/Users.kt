@@ -11,6 +11,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.connect.models.User
@@ -81,6 +83,9 @@ class Users : Fragment(), OnClickUsersItem {
 
     override fun onClickItem(user: User) {
         Log.d(TAG, user.toString())
+        view?.let {
+            it.findNavController().navigate(UsersDirections.actionUsersToUserDetail(userId = user.id.toString()))
+        }
     }
 
 }
